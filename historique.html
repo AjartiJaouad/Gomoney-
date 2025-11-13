@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historique - Gomoney</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-slate-900 via-slate-800 to-blue-900 text-white font-[Poppins] min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center h-20 px-10">
+    <div class="flex items-center gap-2">
+      <img src="img/logo_nav.png" alt="Logo" class="w-10 h-10">
+      <h2 class="font-bold text-2xl text-amber-600">Go<span class="font-light text-yellow-50">money</span></h2>
+    </div>
+    <div class="text-gray-300 flex font-bold">
+      <a href="index.html" class="px-6 py-2 mx-2 rounded-xl hover:border border-gray-400 hover:bg-slate-600 hover:text-slate-900">Accueil</a>
+      <a href="simulation.html" class="px-6 py-2 mx-2 rounded-xl hover:border border-gray-400 hover:bg-slate-600 hover:text-slate-900">Simulation</a>
+      <a href="historique.html" class="px-6 py-2 mx-2 rounded-xl bg-slate-700 rounded-xl">Historique</a>
+      <a href="apropos.html" class="px-6 py-2 mx-2 rounded-xl hover:border border-gray-400 hover:bg-slate-600 hover:text-slate-900">À propos</a>
+    </div>
+    <div class="flex gap-4">
+      <a href="#" class="px-6 py-2 rounded-xl border border-gray-400 hover:bg-slate-600 hover:text-slate-900 text-gray-200 font-bold">Login</a>
+      <a href="#" class="bg-cyan-400 px-6 py-2 text-slate-900 font-bold rounded-xl hover:bg-cyan-600">Signup</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="flex-1 px-10 py-12">
+    <h1 class="text-4xl font-bold text-amber-400 mb-6 text-center">Historique des Simulations</h1>
+    
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-slate-800 rounded-xl shadow-lg">
+        <thead>
+          <tr class="bg-slate-700 text-left">
+            <th class="px-6 py-3 text-gray-300">Date</th>
+            <th class="px-6 py-3 text-gray-300">Nom</th>
+            <th class="px-6 py-3 text-gray-300">Type de prêt</th>
+            <th class="px-6 py-3 text-gray-300">Montant (DH)</th>
+            <th class="px-6 py-3 text-gray-300">Durée (ans)</th>
+            <th class="px-6 py-3 text-gray-300">Salaire (DH)</th>
+            <th class="px-6 py-3 text-gray-300">Mensualité estimée (DH)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-700">
+          <tr>
+            <td class="px-6 py-4">13/11/2025</td>
+            <td class="px-6 py-4">amine</td>
+            <td class="px-6 py-4">Maison</td>
+            <td class="px-6 py-4">500,000</td>
+            <td class="px-6 py-4">20</td>
+            <td class="px-6 py-4">12,000</td>
+            <td class="px-6 py-4">4,000</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">12/11/2025</td>
+            <td class="px-6 py-4">jaouad</td>
+            <td class="px-6 py-4">Pret personnel</td>
+            <td class="px-6 py-4">50,000</td>
+            <td class="px-6 py-4">2</td>
+            <td class="px-6 py-4">4,500</td>
+            <td class="px-6 py-4">2,200</td>
+          </tr>
+          <!-- Ajouter d'autres lignes ici -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-slate-900 via-slate-800 to-blue-900 text-gray-300 py-12 mt-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      © 2025 Gomoney. Tous droits réservés.
+    </div>
+  </footer>
+
+</body>
+</html>
