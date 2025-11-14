@@ -9,7 +9,7 @@ btnSimulate.addEventListener("click", function (e) {
   const montant = parseFloat(document.getElementById("amount").value);
   const duree = parseFloat(document.getElementById("years").value);
   const salaire = parseFloat(document.getElementById("salary").value);
-  const nbMois  = duree *12 ;
+  const nbMois = duree * 12;
 
   if (!nom || !montant || !duree || !salaire) {
     afficherErreur("Veuillez remplir tous les champs.");
@@ -29,7 +29,7 @@ btnSimulate.addEventListener("click", function (e) {
     "Prêt personnel": 6,
   }[typePret];
 
-  
+
 
   //  Calcul mensualite
   const tauxMensuel = (taux / 100) / 12;
@@ -52,24 +52,26 @@ btnSimulate.addEventListener("click", function (e) {
   result.innerHTML = `
     <h3>Rsultat de la simulation</h3>
     <p><strong>Nom :</strong> ${nom}</p>
-    <p><strong>Type de prêt :</strong> ${typePret}</p>
+    <p><strong>Type de pret :</strong> ${typePret}</p>
     <p><strong>Montant demande :</strong> ${montant.toFixed(2)} DH</p>
     <p><strong>Taux applique :</strong> ${taux}%</p>
     <p><strong>Mensualité :</strong> ${mensualite.toFixed(2)} DH / mois</p>
-    <p><strong>Total des intérêts :</strong> ${totalInterets.toFixed(2)} DH</p>
+    <p><strong>Total des interets :</strong> ${totalInterets.toFixed(2)} DH</p>
     <p><strong>Montant total à rembourser :</strong> ${totalRembourse.toFixed(2)} DH</p>
     <p><strong>Durée :</strong> ${duree} ans </p>
   `;
+  // Exemple : totalInterets et totalRembourse déjà calculés
+  const pourcentageInteret = (totalInterets / totalRembourse) * 100;
+
+  // Récupère la barre et change sa largeur
+  const bar = document.getElementById("interet-bar");
+  bar.style.width = pourcentageInteret + "%";
+
+
 });
 
 
 function afficherErreur(message) {
-  result.style.color = "#ebeeecff";
+  result.style.color = "#ebeeec";
   result.innerHTML = `<strong>${message}</strong>`;
 }
-// Exemple : totalInterets et totalRembourse déjà calculés
-const pourcentageInteret = (totalInterets / totalRembourse) * 100;
-
-// Récupère la barre et change sa largeur
-const bar = document.getElementById("interet-bar");
-bar.style.width = pourcentageInteret + "%";
